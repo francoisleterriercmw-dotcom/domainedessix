@@ -40,19 +40,21 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LodgingBusiness", "BedAndBreakfast"],
-      "@id": "https://www.domainedessix.fr/#domaine",
+      "@type": "LodgingBusiness",
+      "@id": "https://www.domainedessix.fr/#lodging",
       "name": "Domaine des Six",
+      "description": "Chambres d'hôtes, gîte et studios avec piscine et parc arboré à Lherm (Haute-Garonne), à 20 minutes au sud de Toulouse. Réceptions, séminaires et retraites bien-être en Sud-Toulousain.",
       "url": "https://www.domainedessix.fr/",
-      "description": "Propriété de caractère avec piscine et parc arboré à Lherm, à 20 minutes au sud de Toulouse. Chambres d'hôtes, gîte et studios, réceptions, séminaires et retraites bien-être en Sud-Toulousain (Haute-Garonne, Occitanie).",
+      "telephone": "+33698200208",
+      "email": "contact@domainedessix.fr",
       "image": "https://www.domainedessix.fr/hero-wide.jpg",
       "logo": "https://www.domainedessix.fr/logo-mark.png",
-      "telephone": "+33698200208",
-      "email": "francois.leterrier.cmw@gmail.com",
-      "priceRange": "€€",
+      "priceRange": "45–150 €",
       "currenciesAccepted": "EUR",
-      "numberOfRooms": 6,
       "petsAllowed": true,
+      "numberOfRooms": 6,
+      "checkinTime": "16:00",
+      "checkoutTime": "11:00",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "187 route de Lavernose",
@@ -61,33 +63,26 @@
         "addressRegion": "Occitanie",
         "addressCountry": "FR"
       },
-      "geo": { "@type": "GeoCoordinates", "latitude": 43.3936, "longitude": 1.2231 },
-      "areaServed": [
-        { "@type": "City", "name": "Lherm" },
-        { "@type": "City", "name": "Muret" },
-        { "@type": "City", "name": "Toulouse" },
-        { "@type": "City", "name": "Carbonne" },
-        { "@type": "City", "name": "Rieumes" },
-        { "@type": "City", "name": "Saint-Lys" },
-        { "@type": "AdministrativeArea", "name": "Sud-Toulousain" },
-        { "@type": "AdministrativeArea", "name": "Haute-Garonne" },
-        { "@type": "AdministrativeArea", "name": "Occitanie" }
-      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.3936,
+        "longitude": 1.2231
+      },
+      "hasMap": "https://maps.google.com/maps?q=187+route+de+Lavernose,+31600+Lherm",
       "amenityFeature": [
         { "@type": "LocationFeatureSpecification", "name": "Piscine extérieure plein sud", "value": true },
-        { "@type": "LocationFeatureSpecification", "name": "Parc arboré de 4 600 m²", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Parc arboré clos de 4 600 m²", "value": true },
         { "@type": "LocationFeatureSpecification", "name": "Salle de sport", "value": true },
-        { "@type": "LocationFeatureSpecification", "name": "Pool house et kiosque", "value": true },
-        { "@type": "LocationFeatureSpecification", "name": "Parking privé", "value": true },
-        { "@type": "LocationFeatureSpecification", "name": "Vue sur les Pyrénées", "value": true }
+        { "@type": "LocationFeatureSpecification", "name": "Pool house", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Wifi", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Parking privé", "value": true }
       ],
-      "makesOffer": [
-        { "@type": "Offer", "name": "Ora — gîte T3", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "110", "priceCurrency": "EUR", "unitText": "nuit" } },
-        { "@type": "Offer", "name": "Sens — studio T3 duplex", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "90", "priceCurrency": "EUR", "unitText": "nuit" } },
-        { "@type": "Offer", "name": "Amazone — studio", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "55", "priceCurrency": "EUR", "unitText": "nuit" } },
-        { "@type": "Offer", "name": "Libération — studio", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "55", "priceCurrency": "EUR", "unitText": "nuit" } },
-        { "@type": "Offer", "name": "Désir — studio", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "50", "priceCurrency": "EUR", "unitText": "nuit" } },
-        { "@type": "Offer", "name": "Évasion — chambre", "priceSpecification": { "@type": "UnitPriceSpecification", "price": "45", "priceCurrency": "EUR", "unitText": "nuit" } }
+      "areaServed": [
+        { "@type": "City", "name": "Toulouse" },
+        { "@type": "City", "name": "Muret" },
+        { "@type": "City", "name": "Carbonne" },
+        { "@type": "City", "name": "Rieumes" },
+        { "@type": "City", "name": "Saint-Lys" }
       ]
     },
     {
@@ -96,24 +91,18 @@
       "url": "https://www.domainedessix.fr/",
       "name": "Domaine des Six",
       "inLanguage": "fr-FR",
-      "publisher": { "@id": "https://www.domainedessix.fr/#domaine" }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.domainedessix.fr/" },
-        { "@type": "ListItem", "position": 2, "name": "Hébergements", "item": "https://www.domainedessix.fr/#hebergements" },
-        { "@type": "ListItem", "position": 3, "name": "Réserver", "item": "https://www.domainedessix.fr/#reservation" }
-      ]
+      "publisher": { "@id": "https://www.domainedessix.fr/#lodging" }
     },
     {
       "@type": "FAQPage",
+      "@id": "https://www.domainedessix.fr/#faq-home",
       "mainEntity": [
-        { "@type": "Question", "name": "Où se situe le Domaine des Six ?", "acceptedAnswer": { "@type": "Answer", "text": "Le Domaine des Six se trouve à Lherm (31600), en Haute-Garonne, à seulement 20 minutes au sud de Toulouse et à 11 km de Muret, au cœur du Sud-Toulousain." } },
-        { "@type": "Question", "name": "Quels types d'hébergements propose le domaine ?", "acceptedAnswer": { "@type": "Answer", "text": "Le domaine compte six logements indépendants : un gîte T3 (Ora), un studio duplex T3 (Sens), trois studios (Amazone, Libération, Désir) et une chambre (Évasion), pour accueillir jusqu'à 17 personnes." } },
-        { "@type": "Question", "name": "Y a-t-il une piscine ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui. Le domaine dispose d'une piscine extérieure plein sud avec plages solarium, accessible à tous les hôtes, ainsi qu'un parc arboré de 4 600 m², un pool house, un kiosque et une salle de sport." } },
-        { "@type": "Question", "name": "Peut-on y organiser un mariage ou un séminaire ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, le Domaine des Six accueille réceptions, mariages, anniversaires et séminaires d'entreprise dans un cadre nature, en intérieur comme en extérieur, à proximité de Toulouse." } },
-        { "@type": "Question", "name": "Quels sont les tarifs ?", "acceptedAnswer": { "@type": "Answer", "text": "Les tarifs varient selon la saison, à partir de 45 € la nuit en basse saison pour la chambre Évasion et jusqu'à 150 € la nuit pour le gîte Ora en haute saison." } }
+        { "@type": "Question", "name": "Où se situe le Domaine des Six ?", "acceptedAnswer": { "@type": "Answer", "text": "Le Domaine des Six se trouve à Lherm (31600), en Haute-Garonne, à seulement 20 minutes au sud de Toulouse et à 11 km de Muret, au cœur du Sud-Toulousain. Idéalement placé entre Toulouse, les Pyrénées et la vallée de la Garonne." } },
+        { "@type": "Question", "name": "Quels types d'hébergements propose le domaine ?", "acceptedAnswer": { "@type": "Answer", "text": "Six logements indépendants : un gîte T3 (Ora), un studio duplex T3 (Sens), trois studios (Amazone, Libération, Désir) et une chambre (Évasion), soit jusqu'à 17 personnes — parfait pour familles, groupes et événements." } },
+        { "@type": "Question", "name": "Y a-t-il une piscine et des espaces extérieurs ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui : une piscine extérieure plein sud avec plages solarium, un parc arboré de 4 600 m² (oliviers, arbres fruitiers), un pool house, un kiosque, une paillote et une salle de sport — le tout avec vue sur les Pyrénées." } },
+        { "@type": "Question", "name": "Peut-on y organiser un mariage, un séminaire ou un événement ?", "acceptedAnswer": { "@type": "Answer", "text": "Absolument. Le Domaine des Six accueille mariages, anniversaires, séminaires et réceptions dans un cadre nature à 20 minutes de Toulouse, en intérieur comme en plein air, avec une grande capacité d'accueil." } },
+        { "@type": "Question", "name": "Quels sont les tarifs et comment réserver ?", "acceptedAnswer": { "@type": "Answer", "text": "Les tarifs varient selon la saison, à partir de 45 €/nuit (basse saison) jusqu'à 150 €/nuit pour le gîte en haute saison. Consultez la grille tarifaire et contactez-nous pour réserver vos dates." } },
+        { "@type": "Question", "name": "Proposez-vous des retraites bien-être ?", "acceptedAnswer": { "@type": "Answer", "text": "Oui, le domaine est un cadre idéal pour les retraites yoga, méditation et ressourcement : espaces calmes, salle de sport, grande capacité d'accueil et nature préservée, à proximité de Toulouse et de la Haute-Garonne." } }
       ]
     }
   ]
@@ -172,7 +161,7 @@
   <section class="hero" id="accueil">
     <picture class="hero-art">
       <source media="(max-width:620px)" srcset="hero-portrait.jpg">
-      <img src="hero-wide.jpg" alt="Domaine des Six — médaillon de l'arbre de vie dans la végétation, à Lherm près de Toulouse">
+      <img src="hero-wide.jpg" alt="Domaine des Six — médaillon de l'arbre de vie dans la végétation, à Lherm près de Toulouse" fetchpriority="high" decoding="async">
     </picture>
     <div class="hero-overlay"></div>
     <h1 class="sr-only">Domaine des Six — chambres d'hôtes, gîte et réceptions à Lherm, près de Toulouse</h1>
@@ -369,6 +358,27 @@
         </table>
       </div>
       <p class="form-note">Tarifs indicatifs par nuit, susceptibles d'évoluer selon la période et la durée du séjour.</p>
+
+      <!-- §7 — Capture email de pré-lancement.
+           [À CONFIGURER : endpoint d'inscription] — choisir Brevo ou Mailchimp (RGPD + double opt-in gérés),
+           coller le formulaire « embed » fourni par le service à la place du <form> ci-dessous, puis retirer
+           les attributs `disabled` pour activer le champ. Tant que le backend n'est pas choisi, le champ reste
+           désactivé afin de ne rien promettre qu'on ne puisse encore tenir. -->
+      <div class="booking-embed" id="prelaunch" style="margin-top:44px">
+        <div class="booking-ph">
+          <span class="booking-ico">✉️</span>
+          <p><strong>Prévenez-moi de l'ouverture</strong><br>Le domaine ouvre en décembre 2026. Laissez votre email pour être informé(e) dès l'ouverture des réservations — sans spam.</p>
+          <form class="prelaunch-form" onsubmit="return false;" aria-label="Être prévenu de l'ouverture" style="display:flex;flex-direction:column;gap:12px;width:100%;max-width:420px;margin:8px auto 0">
+            <input type="email" name="email" placeholder="vous@email.fr" autocomplete="email" aria-label="Votre adresse email" disabled style="width:100%;font-family:var(--sans);font-size:15px;color:var(--ink);background:var(--cream);border:1px solid var(--line);border-radius:10px;padding:12px 14px">
+            <label style="display:flex;gap:10px;align-items:flex-start;font-size:12.5px;color:var(--muted);text-align:left;line-height:1.5">
+              <input type="checkbox" name="consent" disabled>
+              <span>J'accepte d'être recontacté(e) au sujet de l'ouverture du Domaine des Six (voir les <a class="inl" href="mentions-legales.html">mentions légales</a>).</span>
+            </label>
+            <button class="btn" type="submit" disabled>Me prévenir de l'ouverture</button>
+          </form>
+          <p class="form-note">Inscription bientôt disponible — en attendant, vous pouvez <a class="inl" href="#contact">nous écrire</a> pour réserver vos dates.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -399,7 +409,7 @@
         </details>
         <details>
           <summary>Quels sont les tarifs et comment réserver ?</summary>
-          <div>Les tarifs varient selon la saison, <strong>à partir de 45 €/nuit</strong> (basse saison) jusqu'à 150 €/nuit pour le gîte en haute saison. Consultez la <a class="inl" href="#reservation">grille tarifaire</a> et réservez directement en ligne ou contactez-nous.</div>
+          <div>Les tarifs varient selon la saison, <strong>à partir de 45 €/nuit</strong> (basse saison) jusqu'à 150 €/nuit pour le gîte en haute saison. Consultez la <a class="inl" href="#reservation">grille tarifaire</a> et contactez-nous pour réserver vos dates.</div>
         </details>
         <details>
           <summary>Proposez-vous des retraites bien-être ?</summary>
@@ -428,7 +438,7 @@
   <section class="section alt" id="hotes">
     <div class="wrap split">
       <div class="split-media">
-        <img class="hosts-photo" src="hotes.jpg" alt="Virginie et François, vos hôtes au Domaine des Six à Lherm">
+        <img class="hosts-photo" src="hotes.jpg" alt="Virginie et François, vos hôtes au Domaine des Six à Lherm" loading="lazy" decoding="async">
       </div>
       <div class="split-text">
         <p class="eyebrow dark">Vos hôtes</p>
@@ -467,10 +477,13 @@
         <p>Une question, une date à réserver, un projet d'événement ? Écrivez-nous, nous vous répondrons avec plaisir.</p>
         <ul class="contact-info">
           <li><span>Téléphone</span><a href="tel:+33698200208">06 98 20 02 08</a></li>
-          <li><span>Email</span><a href="mailto:francois.leterrier.cmw@gmail.com">francois.leterrier.cmw@gmail.com</a></li>
+          <li><span>Email</span><a href="mailto:contact@domainedessix.fr">contact@domainedessix.fr</a></li>
           <li><span>Adresse</span>187 route de Lavernose, 31600 Lherm — Haute-Garonne, à 20 min de Toulouse</li>
         </ul>
       </div>
+      <!-- DEPLOIEMENT TEMPORAIRE : action sur le gmail qui fonctionne, car la boite contact@domainedessix.fr
+           n'existe pas encore. DES qu'elle est creee : remettre action="https://formsubmit.co/contact@domainedessix.fr"
+           et valider le 1er envoi (FormSubmit renvoie un email d'activation a la nouvelle adresse). -->
       <form class="split-media form" action="https://formsubmit.co/francois.leterrier.cmw@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="Nouvelle demande — Domaine des Six">
         <input type="hidden" name="_template" value="table">
@@ -522,7 +535,7 @@
         <span>Domaine des Six</span>
       </div>
       <p>Chambres d'hôtes · Gîte · Réceptions · Retraites bien-être — Lherm, à 20 min de Toulouse</p>
-      <p class="footer-nap">Domaine des Six · 187 route de Lavernose, 31600 Lherm, Haute-Garonne · Occitanie · <a href="tel:+33698200208">06 98 20 02 08</a> · <a href="mailto:francois.leterrier.cmw@gmail.com">francois.leterrier.cmw@gmail.com</a><br>Hébergement &amp; réceptions dans le Sud-Toulousain : Lherm, Muret, Carbonne, Rieumes, Saint-Lys, Toulouse.</p>
+      <p class="footer-nap">Domaine des Six · 187 route de Lavernose, 31600 Lherm, Haute-Garonne · Occitanie · <a href="tel:+33698200208">06 98 20 02 08</a> · <a href="mailto:contact@domainedessix.fr">contact@domainedessix.fr</a><br>Hébergement &amp; réceptions dans le Sud-Toulousain : Lherm, Muret, Carbonne, Rieumes, Saint-Lys, Toulouse.</p>
       <p class="footer-links"><a href="mariage-reception.html">Mariage &amp; réception</a> · <a href="seminaire-entreprise.html">Séminaire</a> · <a href="retraite-bien-etre.html">Retraite bien-être</a> · <a href="gite-piscine-toulouse.html">Gîte avec piscine</a> · <a href="blog.html">Blog</a> · <a href="faq.html">FAQ</a> · <a href="gite-groupe-toulouse.html">Gîte de groupe</a> · <a href="hebergement-muret.html">Près de Muret</a> · <a href="hebergement-carbonne.html">Près de Carbonne</a> · <a href="mentions-legales.html">Mentions légales</a> · <a href="cgv.html">CGV</a></p>
       <p class="copy">© <span id="y"></span> Domaine des Six — Tous droits réservés</p>
       <p class="footer-credit">Création du site : <a href="https://francoisleterrier.fr" target="_blank" rel="noopener">François Leterrier</a> · Community manager &amp; création de sites, Sud-Toulousain</p>
