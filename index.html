@@ -325,17 +325,10 @@
       </div>
 
       <div class="booking-embed" id="booking-widget">
-        <div class="booking-ph">
-          <span class="booking-ico">📅</span>
-          <p>Le domaine ouvre en <strong>décembre 2026</strong>. Indiquez-nous vos <strong>dates</strong> (à partir de décembre) et le <strong>logement souhaité</strong> : nous confirmons votre pré-réservation par retour.</p>
-          <div class="hero-actions" style="justify-content:center;margin-top:8px">
-            <a class="btn" href="#contact">Demander mes dates</a>
-            <a class="btn btn-ghost dark" href="tel:+33698200208">06&nbsp;98&nbsp;20&nbsp;02&nbsp;08</a>
-          </div>
-          <!-- Réservation en ligne : quand vos comptes seront prêts, décommentez et ajoutez vos liens
-          <p style="margin-top:14px">Réservez aussi en ligne sur <a class="inl" href="LIEN_AIRBNB" target="_blank" rel="noopener">Airbnb</a> · <a class="inl" href="LIEN_BOOKING" target="_blank" rel="noopener">Booking</a></p>
-          -->
-        </div>
+        <div id="apartmentIframeAll" style="width:100%;min-height:120px"></div>
+        <script type="text/javascript" src="https://login.smoobu.com/js/Settings/BookingToolIframe.js"></script>
+        <script>BookingToolIframe.initialize({"url": "https://login.smoobu.com/en/booking-tool/iframe/1850981", "baseUrl": "https://login.smoobu.com", "target": "#apartmentIframeAll"})</script>
+        <p class="form-note" style="text-align:center;margin-top:16px"><strong>Réservez vos nuitées en direct</strong> ci-dessus — calendrier en temps réel et acompte sécurisé. Pour un <strong>mariage, séminaire, retraite</strong> ou la <strong>privatisation totale du domaine</strong>, <a class="inl" href="#contact">demandez un devis personnalisé</a> ou appelez le <a class="inl" href="tel:+33698200208">06&nbsp;98&nbsp;20&nbsp;02&nbsp;08</a>.</p>
       </div>
 
       <h3 class="season-title">Tarifs indicatifs par nuit selon la saison</h3>
