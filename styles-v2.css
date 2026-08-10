@@ -274,10 +274,11 @@ h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:.01em;line-heig
 html.reveals-on .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease);will-change:opacity,transform;}
 html.reveals-on .reveal.is-visible{opacity:1;transform:none;}
 @media (prefers-reduced-motion:reduce){html.reveals-on .reveal{opacity:1 !important;transform:none !important;}}
-/* Upgrade natif : si le navigateur gère les animations de scroll ET pas de JS-reveal, on anime en CSS pur */
+/* Upgrade natif (scroll-driven) : n'agit QUE si JS a confirmé le support (html.css-scroll),
+   pour ne jamais masquer le contenu quand JS est absent. */
 @supports (animation-timeline:view()){
   @media (prefers-reduced-motion:no-preference){
-    html:not(.reveals-on) .reveal-css{opacity:0;transform:translateY(28px);animation:revealIn linear both;animation-timeline:view();animation-range:entry 5% cover 26%;}
+    html.css-scroll:not(.reveals-on) .reveal-css{opacity:0;transform:translateY(28px);animation:revealIn linear both;animation-timeline:view();animation-range:entry 5% cover 26%;}
   }
 }
 @keyframes revealIn{to{opacity:1;transform:none;}}
