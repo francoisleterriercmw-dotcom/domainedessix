@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=4">
+<link rel="stylesheet" href="styles.css?v=5">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -122,7 +122,7 @@
 
   <header class="nav" id="top">
     <span class="menu-anchor" id="menu" aria-hidden="true"></span>
-    <a class="announce" href="index.html#reservation">✦ <strong>Ouverture décembre 2026</strong> — réservez vos dates ou demandez un devis dès maintenant</a>
+    <a class="announce" href="#reservation">✦ <strong>Ouverture décembre 2026</strong> — réservez vos dates ou demandez un devis dès maintenant</a>
     <div class="wrap nav-inner">
       <a class="brand" href="#top">
         <img src="logo-mark.png" alt="Logo Domaine des Six">
@@ -169,11 +169,50 @@
   <section class="hero" id="accueil">
     <picture class="hero-art">
       <source media="(max-width:620px)" srcset="hero-portrait.jpg">
-      <img src="hero-wide.jpg" alt="Domaine des Six — médaillon de l'arbre de vie dans la végétation, à Lherm près de Toulouse" fetchpriority="high" decoding="async">
+      <img src="hero-wide.jpg" alt="Domaine des Six — parc arboré et piscine à Lherm, près de Toulouse" fetchpriority="high" decoding="async">
     </picture>
     <div class="hero-overlay"></div>
-    <h1 class="sr-only">Domaine des Six — chambres d'hôtes, gîte et réceptions à Lherm, près de Toulouse</h1>
+    <div class="hero-caption">
+      <p class="eyebrow">Lherm · Sud-Toulousain · à 20 min de Toulouse</p>
+      <h1>Votre parenthèse nature<br>au <em>Domaine des Six</em></h1>
+      <p class="hero-sub">Cinq logements indépendants avec piscine plein sud et parc arboré de 4 600 m². Pour une nuit, une semaine ou un événement à célébrer — au calme, à deux pas de Toulouse.</p>
+      <div class="hero-badges">
+        <span>✓ Réservation <b>directe</b>, sans commission</span>
+        <span>🌳 Parc <b>4 600 m²</b> &amp; piscine</span>
+        <span>🐾 Animaux <b>acceptés</b></span>
+      </div>
+      <form class="finder" id="finder" aria-label="Trouver mon logement">
+        <div class="f-field">
+          <label for="f-pers">Combien de personnes&nbsp;?</label>
+          <select id="f-pers" name="personnes">
+            <option value="0">Peu importe</option>
+            <option value="2">1 – 2 personnes</option>
+            <option value="3">3 – 4 personnes</option>
+            <option value="5">5 personnes et +</option>
+          </select>
+        </div>
+        <div class="f-field">
+          <label for="f-type">Type de logement</label>
+          <select id="f-type" name="type">
+            <option value="all">Tous les types</option>
+            <option value="chambre">Chambre</option>
+            <option value="studio">Studio</option>
+            <option value="t3">T3 (2 chambres)</option>
+          </select>
+        </div>
+        <button class="btn btn-gold" type="submit">Voir les logements</button>
+      </form>
+    </div>
+    <a class="scroll-hint" href="#domaine" aria-label="Découvrir le domaine">⌄</a>
   </section>
+
+  <!-- BARRE COLLANTE -->
+  <div class="stickybar" id="stickybar" aria-hidden="true">
+    <div class="stickybar-inner">
+      <div class="stickybar-txt"><b>Dès 45 €</b> / nuit — 5 logements, jusqu'à 17 pers.<span>Ouverture décembre 2026 · réservation directe</span></div>
+      <a class="btn btn-gold btn-sm" href="#reservation">Vérifier mes dates</a>
+    </div>
+  </div>
 
   <!-- LE DOMAINE -->
   <section class="section" id="domaine">
@@ -191,8 +230,96 @@
     </div>
   </section>
 
+  <!-- HÉBERGEMENTS -->
+  <section class="section alt" id="hebergements">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow dark">Les hébergements</p>
+        <h2>Trouvez le logement de votre séjour</h2>
+        <p class="lead">Deux T3, deux studios et une chambre — 173 m² locatifs, jusqu'à 17 personnes. Parc arboré en accès libre ; piscine et salle de sport en option, sur réservation.</p>
+      </div>
+
+      <div class="filters" id="filters" role="group" aria-label="Filtrer les logements">
+        <button class="chip active" data-type="all">Tous</button>
+        <button class="chip" data-type="chambre">Chambre</button>
+        <button class="chip" data-type="studio">Studios</button>
+        <button class="chip" data-type="t3">T3 · famille</button>
+      </div>
+
+      <div class="lodges" id="lodges">
+        <article class="lodge" data-type="t3" data-cap="6" data-price="120">
+          <div class="lodge-media" style="background-image:url('amazone.jpg')">
+            <span class="lodge-tag">T3 · 6 pers.</span>
+            <span class="lodge-price">120 €<span> / nuit</span></span>
+          </div>
+          <div class="lodge-body">
+            <h3>Amazone</h3>
+            <div class="lodge-meta"><span>58 m²</span><span>2 chambres</span><span>Jusqu'à 6 pers.</span></div>
+            <p>Le grand T3 du domaine : deux chambres, deux salles de douche — idéal pour une famille ou un groupe d'amis.</p>
+            <div class="lodge-cta"><a class="btn btn-sm" href="amazone.html">Voir le logement</a><a class="lodge-link" href="#reservation">Tarifs →</a></div>
+          </div>
+        </article>
+
+        <article class="lodge" data-type="t3" data-cap="5" data-price="110">
+          <div class="lodge-media" style="background-image:url('liberation.jpg')">
+            <span class="lodge-tag">T3 · 5 pers.</span>
+            <span class="lodge-price">110 €<span> / nuit</span></span>
+          </div>
+          <div class="lodge-body">
+            <h3>Libération</h3>
+            <div class="lodge-meta"><span>51 m²</span><span>Plain-pied</span><span>Jusqu'à 5 pers.</span></div>
+            <p>Deux chambres (parents / enfants) et salle d'eau privative — parfait pour une famille ou un séjour prolongé.</p>
+            <div class="lodge-cta"><a class="btn btn-sm" href="liberation.html">Voir le logement</a><a class="lodge-link" href="#reservation">Tarifs →</a></div>
+          </div>
+        </article>
+
+        <article class="lodge" data-type="studio" data-cap="2" data-price="55">
+          <div class="lodge-media" style="background-image:url('ora.jpg')">
+            <span class="lodge-tag">Studio · 2 pers.</span>
+            <span class="lodge-price">55 €<span> / nuit</span></span>
+          </div>
+          <div class="lodge-body">
+            <h3>Ora</h3>
+            <div class="lodge-meta"><span>26 m²</span><span>Plain-pied</span><span>2 pers.</span></div>
+            <p>Studio confortable avec salle d'eau / WC privative, au calme du rez-de-chaussée.</p>
+            <div class="lodge-cta"><a class="btn btn-sm" href="ora.html">Voir le logement</a><a class="lodge-link" href="#reservation">Tarifs →</a></div>
+          </div>
+        </article>
+
+        <article class="lodge" data-type="studio" data-cap="2" data-price="55">
+          <div class="lodge-media" style="background-image:url('sens.jpg')">
+            <span class="lodge-tag">Studio · 2 pers.</span>
+            <span class="lodge-price">55 €<span> / nuit</span></span>
+          </div>
+          <div class="lodge-body">
+            <h3>Sens</h3>
+            <div class="lodge-meta"><span>23 m²</span><span>Plain-pied</span><span>2 pers.</span></div>
+            <p>Un cocon douillet avec salle d'eau / WC, pour une escapade à deux au vert.</p>
+            <div class="lodge-cta"><a class="btn btn-sm" href="sens.html">Voir le logement</a><a class="lodge-link" href="#reservation">Tarifs →</a></div>
+          </div>
+        </article>
+
+        <article class="lodge" data-type="chambre" data-cap="2" data-price="45">
+          <div class="lodge-media" style="background-image:url('desir.jpg')">
+            <span class="lodge-tag">Chambre · 2 pers.</span>
+            <span class="lodge-price">45 €<span> / nuit</span></span>
+          </div>
+          <div class="lodge-body">
+            <h3>Désir</h3>
+            <div class="lodge-meta"><span>15 m²</span><span>Plain-pied</span><span>2 pers.</span></div>
+            <p>Une chambre cosy avec salle d'eau / WC — la formule la plus accessible pour découvrir le domaine.</p>
+            <div class="lodge-cta"><a class="btn btn-sm" href="desir.html">Voir le logement</a><a class="lodge-link" href="#reservation">Tarifs →</a></div>
+          </div>
+        </article>
+
+        <p class="lodges-empty" id="lodgesEmpty">Aucun logement ne correspond à ce filtre. <a class="inl" href="#reservation">Contactez-nous</a> pour un séjour sur mesure.</p>
+      </div>
+      <p class="lodges-note">Besoin d'accueillir un grand groupe&nbsp;? Le domaine se privatise <strong>jusqu'à 17 personnes</strong> — <a class="inl" href="gite-groupe-toulouse.html">gîte de groupe</a>.</p>
+    </div>
+  </section>
+
   <!-- SÉJOURNER -->
-  <section class="section alt" id="sejourner">
+  <section class="section" id="sejourner">
     <div class="wrap">
       <div class="section-head">
         <p class="eyebrow dark">Séjourner</p>
@@ -208,13 +335,13 @@
         </article>
         <article class="card">
           <div class="card-icon">⌂</div>
-          <h3>Gîte & location</h3>
+          <h3>Gîte &amp; location</h3>
           <p>Un gîte tout équipé de deux chambres, en pleine autonomie, idéal pour une famille ou un séjour prolongé au plus près de la nature.</p>
           <a class="inl" href="gite-piscine-toulouse.html">Gîte avec piscine →</a>
         </article>
         <article class="card">
           <div class="card-icon">❧</div>
-          <h3>Réceptions & événements</h3>
+          <h3>Réceptions &amp; événements</h3>
           <p>Mariages, séminaires, anniversaires : le domaine se privatise entièrement — parc, kiosque, paillote et pool house pour vos célébrations, en plein air comme à l'abri.</p>
           <a class="inl" href="mariage-reception.html">Mariage &amp; réception →</a> · <a class="inl" href="seminaire-entreprise.html">Séminaire →</a>
         </article>
@@ -228,61 +355,14 @@
     </div>
   </section>
 
-  <!-- HÉBERGEMENTS -->
-  <section class="section" id="hebergements">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow dark">Les hébergements</p>
-        <h2>Cinq logements indépendants</h2>
-        <p class="lead">Deux T3, deux studios et une chambre, soit 173 m² locatifs et jusqu'à 17 personnes — à choisir selon votre séjour. Parc arboré en accès libre ; piscine et salle de sport accessibles en option, sur réservation.</p>
-      </div>
-      <div class="units">
-        <article class="unit u-desir" style="background-image:url('desir.jpg')">
-          <h3>Désir</h3>
-          <p class="unit-meta">Chambre · plain-pied · 15 m² · 2 pers.</p>
-          <p>Une chambre cosy avec salle d'eau / WC, parfaite pour une nuit ou deux.</p>
-          <p class="unit-price">dès 45 € <span>/ nuit</span></p>
-        </article>
-        <article class="unit u-amazone" style="background-image:url('amazone.jpg')">
-          <h3>Amazone</h3>
-          <p class="unit-meta">T3 · 58 m² · jusqu'à 6 pers.</p>
-          <p>Grand T3 de 58 m² avec deux chambres et deux salles de douche, jusqu'à 6 personnes.</p>
-          <p class="unit-price">dès 120 € <span>/ nuit</span></p>
-        </article>
-        <article class="unit u-liberation" style="background-image:url('liberation.jpg')">
-          <h3>Libération</h3>
-          <p class="unit-meta">T3 · plain-pied · 51 m² · jusqu'à 5 pers.</p>
-          <p>Deux chambres (parents / enfants) et salle d'eau privative — l'idéal pour une famille ou un séjour prolongé.</p>
-          <p class="unit-price">dès 110 € <span>/ nuit</span></p>
-        </article>
-        <article class="unit u-ora" style="background-image:url('ora.jpg')">
-          <h3>Ora</h3>
-          <p class="unit-meta">Studio · plain-pied · 26 m² · 2 pers.</p>
-          <p>Studio confortable avec salle d'eau / WC privative.</p>
-          <p class="unit-price">dès 55 € <span>/ nuit</span></p>
-        </article>
-        <article class="unit u-sens" style="background-image:url('sens.jpg')">
-          <h3>Sens</h3>
-          <p class="unit-meta">Studio · plain-pied · 23 m² · 2 pers.</p>
-          <p>Cocon douillet avec salle d'eau / WC, au calme du rez-de-chaussée.</p>
-          <p class="unit-price">dès 55 € <span>/ nuit</span></p>
-        </article>
-      </div>
-      <p class="season-title" style="font-size:18px;margin-top:34px;">Fiches détaillées des logements</p>
-      <div class="crosslinks">
-        <a href="desir.html">Désir</a><a href="amazone.html">Amazone</a><a href="liberation.html">Libération</a><a href="ora.html">Ora</a><a href="sens.html">Sens</a>
-      </div>
-    </div>
-  </section>
-
   <!-- EXPÉRIENCE -->
-  <section class="section alt" id="experience">
+  <section class="section deep" id="experience">
     <div class="wrap split reverse">
       <div class="split-media">
         <div class="ph ph-2" style="background-image:url('2.jpg')"><span>Le parc arboré</span></div>
       </div>
       <div class="split-text">
-        <p class="eyebrow dark">Le cadre &amp; les équipements</p>
+        <p class="eyebrow">Le cadre &amp; les équipements</p>
         <h2>Tout pour se ressourcer</h2>
         <ul class="feature-list">
           <li><strong>Piscine plein sud 13 × 5 m</strong> — grand bassin et plages solarium à la belle exposition.</li>
@@ -291,7 +371,7 @@
           <li><strong>Confort &amp; services</strong> — wifi, parking privé, animaux acceptés.</li>
           <li><strong>Au calme, près de tout</strong> — 20 min de Toulouse, 11 km de Muret, vue Pyrénées.</li>
         </ul>
-        <a class="btn btn-ghost dark" href="#contact">Préparer ma venue</a>
+        <a class="btn btn-ghost" href="#contact">Préparer ma venue</a>
       </div>
     </div>
   </section>
@@ -491,25 +571,6 @@
     </div>
   </section>
 
-  <!-- AVIS — PRÊT À ACTIVER : dès que vous avez 2-3 avis réels (ou votre fiche Google Business),
-       retirez les balises de commentaire ci-dessous et remplacez par de VRAIS témoignages.
-       ⚠️ Ne jamais inventer d'avis : les faux avis sont interdits par la loi (DGCCRF).
-  <section class="section" id="avis">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow dark">Avis</p>
-        <h2>Ils ont séjourné au domaine</h2>
-        <p class="lead">Ce que nos hôtes retiennent de leur passage.</p>
-      </div>
-      <div class="cards">
-        <article class="card"><p>« Témoignage client réel à coller ici. »</p><p class="unit-meta">— Prénom, mois année</p></article>
-        <article class="card"><p>« Témoignage client réel à coller ici. »</p><p class="unit-meta">— Prénom, mois année</p></article>
-        <article class="card"><p>« Témoignage client réel à coller ici. »</p><p class="unit-meta">— Prénom, mois année</p></article>
-      </div>
-    </div>
-  </section>
-  -->
-
   <!-- CONTACT -->
   <section class="section contact" id="contact">
     <div class="wrap split">
@@ -583,7 +644,6 @@
     </div>
   </footer>
 
-  <!-- Couche d'ambiance dorée (poussières + grain) + lightbox galerie -->
   <div class="ambiance" id="ambiance" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galerie photo — Domaine des Six">
@@ -600,16 +660,12 @@
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
     const nav = document.querySelector('.nav');
-    // The menu opens/closes in pure CSS via :target. JS only enhances:
     const menuOpen = () => location.hash === '#menu';
-    const syncMenu = () => {
-      document.body.style.overflow = menuOpen() ? 'hidden' : '';
-      if (menuOpen()) nav.classList.remove('hidden');
-    };
+    const syncMenu = () => { document.body.style.overflow = menuOpen() ? 'hidden' : ''; if (menuOpen()) nav.classList.remove('hidden'); };
     window.addEventListener('hashchange', syncMenu);
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && menuOpen()) location.hash = '#close'; });
     syncMenu();
-    // Hide on scroll down, reveal on scroll up; opaque once past the top
+    const stickybar = document.getElementById('stickybar');
     let lastY = window.scrollY, ticking = false;
     function updateNav(){
       const y = window.scrollY;
@@ -618,146 +674,87 @@
         if (y > 160 && y > lastY + 4) nav.classList.add('hidden');
         else if (y < lastY - 4 || y <= 160) nav.classList.remove('hidden');
       }
+      const contact = document.getElementById('contact');
+      const nearBottom = contact && contact.getBoundingClientRect().top < window.innerHeight * 0.8;
+      stickybar.classList.toggle('show', y > window.innerHeight * 0.9 && !nearBottom);
       lastY = y; ticking = false;
     }
-    window.addEventListener('scroll', () => {
-      if (!ticking){ requestAnimationFrame(updateNav); ticking = true; }
-    }, {passive:true});
+    window.addEventListener('scroll', () => { if (!ticking){ requestAnimationFrame(updateNav); ticking = true; } }, {passive:true});
     updateNav();
   </script>
 
-  <!-- ===== Couche immersive : révélations, parallaxe, ambiance, lightbox ===== -->
+  <script>
+  (function lodgeFinder(){
+    const lodges = [...document.querySelectorAll('#lodges .lodge')];
+    const chips = [...document.querySelectorAll('#filters .chip')];
+    const empty = document.getElementById('lodgesEmpty');
+    let state = { type:'all', cap:0 };
+    function render(){
+      let shown = 0;
+      lodges.forEach(l => {
+        const okType = state.type === 'all' || l.dataset.type === state.type;
+        const okCap  = !state.cap || (+l.dataset.cap) >= state.cap;
+        const show = okType && okCap;
+        l.classList.toggle('is-hidden', !show);
+        if (show) shown++;
+      });
+      empty.style.display = shown ? 'none' : 'block';
+      chips.forEach(c => c.classList.toggle('active', c.dataset.type === state.type));
+    }
+    chips.forEach(c => c.addEventListener('click', () => { state.type = c.dataset.type; state.cap = 0; render(); }));
+    const finder = document.getElementById('finder');
+    finder.addEventListener('submit', e => {
+      e.preventDefault();
+      state.type = document.getElementById('f-type').value;
+      state.cap  = +document.getElementById('f-pers').value || 0;
+      render();
+      document.getElementById('hebergements').scrollIntoView({ behavior:'smooth', block:'start' });
+    });
+    render();
+  })();
+  </script>
+
   <script>
   (function immersive(){
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const finePointer = window.matchMedia('(pointer: fine)').matches;
-
-    /* --- 1. Révélations au scroll --- */
     if (!reduce && 'IntersectionObserver' in window){
       document.documentElement.classList.add('reveals-on');
-      // Groupes avec effet cascade (délai croissant sur les enfants)
-      const groups = [['.cards','.card'],['.units','.unit'],['#gallery','.gallery-item'],
-                      ['.feature-list','li'],['.faq','details']];
-      groups.forEach(([parentSel, childSel]) => {
-        document.querySelectorAll(parentSel).forEach(parent => {
-          [...parent.querySelectorAll(childSel)].forEach((el, i) => {
-            el.classList.add('reveal');
-            el.style.transitionDelay = Math.min(i * 70, 420) + 'ms';
-          });
-        });
-      });
-      // Éléments isolés
-      document.querySelectorAll('.section-head, .split-text, .split-media, .booking-embed, .season-title, .season-legend, .table-wrap, .contact-info, .contact .form, .crosslinks')
-        .forEach(el => el.classList.add('reveal'));
-
-      const io = new IntersectionObserver((entries) => {
-        for (const e of entries){
-          if (e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); }
-        }
-      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+      const groups = [['.cards','.card'],['#lodges','.lodge'],['#gallery','.gallery-item'],['.feature-list','li'],['.faq','details']];
+      groups.forEach(([p,c]) => document.querySelectorAll(p).forEach(par => [...par.querySelectorAll(c)].forEach((el,i)=>{el.classList.add('reveal');el.style.transitionDelay=Math.min(i*70,420)+'ms';})));
+      document.querySelectorAll('.section-head,.split-text,.split-media,.booking-embed,.season-title,.season-legend,.table-wrap,.contact-info,.form').forEach(el=>el.classList.add('reveal'));
+      const io = new IntersectionObserver((es)=>{for(const e of es){if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);}}},{rootMargin:'0px 0px -8% 0px',threshold:0.08});
+      document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
     }
-
-    /* --- 2. Parallaxe douce sur les médias de section --- */
     if (!reduce){
       const phs = [...document.querySelectorAll('.split-media .ph')];
       if (phs.length){
-        let raf = false;
-        const run = () => {
-          const vh = window.innerHeight;
-          for (const el of phs){
-            const r = el.getBoundingClientRect();
-            if (r.bottom < -40 || r.top > vh + 40) continue;
-            const prog = (r.top + r.height / 2 - vh / 2) / vh; // ~ -0.6..0.6
-            const py = 50 - Math.max(-1, Math.min(1, prog)) * 9;  // 41%..59%
-            el.style.setProperty('--py', py.toFixed(2) + '%');
-          }
-          raf = false;
-        };
-        const onScroll = () => { if (!raf){ raf = true; requestAnimationFrame(run); } };
-        window.addEventListener('scroll', onScroll, { passive: true });
-        window.addEventListener('resize', onScroll, { passive: true });
-        run();
+        let raf=false;
+        const run=()=>{const vh=innerHeight;for(const el of phs){const r=el.getBoundingClientRect();if(r.bottom<-40||r.top>vh+40)continue;const prog=(r.top+r.height/2-vh/2)/vh;el.style.setProperty('--py',(50-Math.max(-1,Math.min(1,prog))*9).toFixed(2)+'%');}raf=false;};
+        addEventListener('scroll',()=>{if(!raf){raf=true;requestAnimationFrame(run);}},{passive:true});
+        addEventListener('resize',()=>{if(!raf){raf=true;requestAnimationFrame(run);}},{passive:true});run();
       }
     }
-
-    /* --- 3. Ambiance : poussières de lumière dorées (mix-blend screen) --- */
     (function motes(){
-      const layer = document.getElementById('ambiance');
-      if (!layer || reduce || !finePointer) return;
-      for (let i = 0; i < 12; i++){
-        const m = document.createElement('span');
-        m.className = 'mote';
-        const s = 2 + Math.random() * 5;
-        m.style.width = m.style.height = s.toFixed(1) + 'px';
-        m.style.left = (Math.random() * 100).toFixed(2) + '%';
-        m.style.setProperty('--o', (0.3 + Math.random() * 0.45).toFixed(2));
-        m.style.setProperty('--dx', (Math.random() * 50 - 25).toFixed(0) + 'px');
-        const d = 18 + Math.random() * 20;
-        m.style.animationDuration = d.toFixed(1) + 's';
-        m.style.animationDelay = (-Math.random() * d).toFixed(1) + 's';
-        layer.appendChild(m);
-      }
+      const layer=document.getElementById('ambiance');
+      if(!layer||reduce||!finePointer)return;
+      for(let i=0;i<12;i++){const m=document.createElement('span');m.className='mote';const s=2+Math.random()*5;m.style.width=m.style.height=s.toFixed(1)+'px';m.style.left=(Math.random()*100).toFixed(2)+'%';m.style.setProperty('--o',(0.3+Math.random()*0.45).toFixed(2));m.style.setProperty('--dx',(Math.random()*50-25).toFixed(0)+'px');const d=18+Math.random()*20;m.style.animationDuration=d.toFixed(1)+'s';m.style.animationDelay=(-Math.random()*d).toFixed(1)+'s';layer.appendChild(m);}
     })();
-
-    /* --- 4. Lightbox galerie (clic, ←/→, Échap, focus piégé) --- */
     (function lightbox(){
-      const items = [...document.querySelectorAll('#gallery .gallery-item')];
-      const box = document.getElementById('lightbox');
-      if (!items.length || !box) return;
-      const imgEl = document.getElementById('lbImg');
-      const capEl = document.getElementById('lbCap');
-      const countEl = document.getElementById('lbCount');
-      const btnPrev = document.getElementById('lbPrev');
-      const btnNext = document.getElementById('lbNext');
-      const btnClose = document.getElementById('lbClose');
-      const slides = items.map(it => ({
-        full: it.getAttribute('data-full'),
-        cap: (it.querySelector('.gcap')?.textContent || '').trim(),
-        alt: it.querySelector('img')?.getAttribute('alt') || ''
-      }));
-      let idx = 0, lastFocus = null;
-
-      function show(i){
-        idx = (i + slides.length) % slides.length;
-        const s = slides[idx];
-        imgEl.style.opacity = '0';
-        const pre = new Image();
-        pre.onload = () => { imgEl.src = s.full; imgEl.alt = s.alt; imgEl.style.opacity = '1'; };
-        pre.src = s.full;
-        capEl.textContent = s.cap;
-        countEl.textContent = (idx + 1) + ' / ' + slides.length;
-      }
-      function open(i){
-        lastFocus = document.activeElement;
-        show(i);
-        box.classList.add('open');
-        document.body.style.overflow = 'hidden';
-        btnClose.focus();
-        document.addEventListener('keydown', onKey);
-      }
-      function close(){
-        box.classList.remove('open');
-        document.body.style.overflow = '';
-        document.removeEventListener('keydown', onKey);
-        if (lastFocus && lastFocus.focus) lastFocus.focus();
-      }
-      function onKey(e){
-        if (e.key === 'Escape') close();
-        else if (e.key === 'ArrowRight') show(idx + 1);
-        else if (e.key === 'ArrowLeft') show(idx - 1);
-        else if (e.key === 'Tab'){ // focus piégé
-          const f = [btnClose, btnPrev, btnNext];
-          const first = f[0], last = f[f.length - 1];
-          if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
-          else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
-        }
-      }
-      items.forEach((it, i) => it.addEventListener('click', () => open(i)));
-      btnPrev.addEventListener('click', () => show(idx - 1));
-      btnNext.addEventListener('click', () => show(idx + 1));
-      btnClose.addEventListener('click', close);
-      box.addEventListener('click', (e) => { if (e.target === box) close(); });
+      const items=[...document.querySelectorAll('#gallery .gallery-item')];
+      const box=document.getElementById('lightbox');
+      if(!items.length||!box)return;
+      const imgEl=document.getElementById('lbImg'),capEl=document.getElementById('lbCap'),countEl=document.getElementById('lbCount');
+      const btnPrev=document.getElementById('lbPrev'),btnNext=document.getElementById('lbNext'),btnClose=document.getElementById('lbClose');
+      const slides=items.map(it=>({full:it.getAttribute('data-full'),cap:(it.querySelector('.gcap')?.textContent||'').trim(),alt:it.querySelector('img')?.getAttribute('alt')||''}));
+      let idx=0,lastFocus=null;
+      function show(i){idx=(i+slides.length)%slides.length;const s=slides[idx];imgEl.style.opacity='0';const pre=new Image();pre.onload=()=>{imgEl.src=s.full;imgEl.alt=s.alt;imgEl.style.opacity='1';};pre.src=s.full;capEl.textContent=s.cap;countEl.textContent=(idx+1)+' / '+slides.length;}
+      function open(i){lastFocus=document.activeElement;show(i);box.classList.add('open');document.body.style.overflow='hidden';btnClose.focus();document.addEventListener('keydown',onKey);}
+      function close(){box.classList.remove('open');document.body.style.overflow='';document.removeEventListener('keydown',onKey);if(lastFocus&&lastFocus.focus)lastFocus.focus();}
+      function onKey(e){if(e.key==='Escape')close();else if(e.key==='ArrowRight')show(idx+1);else if(e.key==='ArrowLeft')show(idx-1);}
+      items.forEach((it,i)=>it.addEventListener('click',()=>open(i)));
+      btnPrev.addEventListener('click',()=>show(idx-1));btnNext.addEventListener('click',()=>show(idx+1));btnClose.addEventListener('click',close);
+      box.addEventListener('click',e=>{if(e.target===box)close();});
     })();
   })();
   </script>
