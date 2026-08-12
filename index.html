@@ -273,7 +273,7 @@
           </div>
         </article>
 
-        <article class="lodge" data-type="studio" data-cap="2" data-price="55">
+        <article class="lodge" data-type="studio" data-cap="2" data-combine="4" data-price="55">
           <div class="lodge-media" style="background-image:url('ora.jpg')">
             <span class="lodge-tag">Studio · 2 pers.</span>
             <span class="lodge-price">55 €<span> / nuit</span></span>
@@ -281,12 +281,13 @@
           <div class="lodge-body">
             <h3>Ora</h3>
             <div class="lodge-meta"><span>26 m²</span><span>Plain-pied</span><span>2 pers.</span></div>
+            <p class="lodge-combo" style="margin:-4px 0 12px;font-size:12.5px;color:var(--bronze);font-weight:500">✦ Communicant avec <strong>Sens</strong> — jusqu'à <strong>4 personnes</strong> réservés ensemble</p>
             <p>Studio confortable avec salle d'eau / WC privative, au calme du rez-de-chaussée.</p>
             <div class="lodge-cta"><a class="btn btn-sm" href="ora.html">Voir le logement</a><a class="lodge-link" href="#reservation">Tarifs →</a></div>
           </div>
         </article>
 
-        <article class="lodge" data-type="studio" data-cap="2" data-price="55">
+        <article class="lodge" data-type="studio" data-cap="2" data-combine="4" data-price="55">
           <div class="lodge-media" style="background-image:url('sens.jpg')">
             <span class="lodge-tag">Studio · 2 pers.</span>
             <span class="lodge-price">55 €<span> / nuit</span></span>
@@ -294,6 +295,7 @@
           <div class="lodge-body">
             <h3>Sens</h3>
             <div class="lodge-meta"><span>23 m²</span><span>Plain-pied</span><span>2 pers.</span></div>
+            <p class="lodge-combo" style="margin:-4px 0 12px;font-size:12.5px;color:var(--bronze);font-weight:500">✦ Communicant avec <strong>Ora</strong> — jusqu'à <strong>4 personnes</strong> réservés ensemble</p>
             <p>Un cocon douillet avec salle d'eau / WC, pour une escapade à deux au vert.</p>
             <div class="lodge-cta"><a class="btn btn-sm" href="sens.html">Voir le logement</a><a class="lodge-link" href="#reservation">Tarifs →</a></div>
           </div>
@@ -693,7 +695,8 @@
       let shown = 0;
       lodges.forEach(l => {
         const okType = state.type === 'all' || l.dataset.type === state.type;
-        const okCap  = !state.cap || (+l.dataset.cap) >= state.cap;
+        const cap = Math.max(+l.dataset.cap || 0, +l.dataset.combine || 0); // studios communicants : capacité combinée
+        const okCap  = !state.cap || cap >= state.cap;
         const show = okType && okCap;
         l.classList.toggle('is-hidden', !show);
         if (show) shown++;
