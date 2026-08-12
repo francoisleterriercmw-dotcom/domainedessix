@@ -124,7 +124,7 @@
     <span class="menu-anchor" id="menu" aria-hidden="true"></span>
     <a class="announce" href="#reservation">✦ <strong>Ouverture décembre 2026</strong> — réservez vos dates ou demandez un devis dès maintenant</a>
     <div class="wrap nav-inner">
-      <a class="brand" href="#top">
+      <a class="brand" href="#accueil" aria-label="Retour en haut de la page">
         <img src="logo-mark.png" alt="Logo Domaine des Six">
         <span>Domaine des Six</span>
       </a>
@@ -665,6 +665,13 @@
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
     const nav = document.querySelector('.nav');
+    // Clic sur le logo → retour tout en haut (scroll doux) + nettoyage du hash
+    document.querySelector('.brand')?.addEventListener('click', e => {
+      e.preventDefault();
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    });
     const menuOpen = () => location.hash === '#menu';
     const syncMenu = () => { document.body.style.overflow = menuOpen() ? 'hidden' : ''; if (menuOpen()) nav.classList.remove('hidden'); };
     window.addEventListener('hashchange', syncMenu);
