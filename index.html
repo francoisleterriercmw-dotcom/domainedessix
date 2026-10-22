@@ -335,8 +335,8 @@
         fragmentShader:`precision highp float;varying vec2 vUv;uniform sampler2D uTex;uniform vec2 uRes,uImg,uMouse;uniform float uTime,uStr;
         void main(){vec2 r=uRes/uImg;float s=max(r.x,r.y);vec2 sz=uImg*s;vec2 uv=(vUv*uRes-(uRes-sz)*.5)/sz;
           vec2 d=uv-uMouse;d.x*=uRes.x/uRes.y;float dist=length(d);
-          float rip=sin(dist*18.0-uTime*1.6)*exp(-dist*4.0)*0.006*(0.3+uStr);
-          vec2 w=vec2(sin(uv.y*6.0+uTime*.6),cos(uv.x*5.0+uTime*.5))*0.004;
+          float rip=sin(dist*14.0-uTime*0.5)*exp(-dist*4.0)*0.0025*(0.3+uStr);
+          vec2 w=vec2(sin(uv.y*5.0+uTime*.18),cos(uv.x*4.0+uTime*.15))*0.0018;
           vec2 off=normalize(d+1e-4)*rip+w;
           float ca=0.0;
           vec3 c=vec3(texture2D(uTex,uv+off+vec2(ca,0.)).r,texture2D(uTex,uv+off).g,texture2D(uTex,uv+off-vec2(ca,0.)).b);
@@ -349,8 +349,8 @@
       addEventListener('mousemove',e=>{const r=cv.getBoundingClientRect();tx=(e.clientX-r.left)/r.width;ty=1-(e.clientY-r.top)/r.height;},{passive:true});
       addEventListener('touchmove',e=>{const t=e.touches[0],r=cv.getBoundingClientRect();tx=(t.clientX-r.left)/r.width;ty=1-(t.clientY-r.top)/r.height;},{passive:true});
       let last=0;const tick=ts=>{if(!u.uTex.value){requestAnimationFrame(tick);return;}
-        const vx=tx-lx,vy=ty-ly;lx+=vx*.08;ly+=vy*.08;u.uMouse.value.set(lx,ly);
-        u.uStr.value+= (Math.min(1,Math.hypot(vx,vy)*18)-u.uStr.value)*.08;u.uTime.value=ts/1000;
+        const vx=tx-lx,vy=ty-ly;lx+=vx*.025;ly+=vy*.025;u.uMouse.value.set(lx,ly);
+        u.uStr.value+= (Math.min(.6,Math.hypot(vx,vy)*8)-u.uStr.value)*.04;u.uTime.value=ts/1000;
         if(scrollY<innerHeight*1.1)renderer.render(scene,cam);requestAnimationFrame(tick);};
       requestAnimationFrame(tick);
     }catch(e){cv.style.display='none';fb.style.display='block';}
