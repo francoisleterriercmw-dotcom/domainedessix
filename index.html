@@ -389,7 +389,7 @@
   gsap.from('.story .body,.story .tag',{opacity:0,y:20,duration:1,scrollTrigger:{trigger:'#quote',start:'top 70%'}});
 
   /* Apparitions douces */
-  gsap.utils.toArray('.stays-head > *,.cele h2,.cele .tag,.hosts > *,.book .grid > *,.faqs .head,.faq,.contact-sec .head,.cgrid').forEach(el=>gsap.from(el,{opacity:0,y:30,duration:1.1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}}));
+  gsap.utils.toArray('.stays-head > *,.cele h2,.cele .tag,.hosts > *,.book .grid > *').forEach(el=>gsap.from(el,{opacity:0,y:30,duration:1.1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}}));
 
   /* Bouton magnétique */
   const orb=document.getElementById('orb');
