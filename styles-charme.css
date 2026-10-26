@@ -414,6 +414,10 @@ footer b{font-family:var(--display);font-weight:400;letter-spacing:.3em;text-tra
 .port table{width:100%;border-collapse:collapse;margin:0 0 20px;font-size:15px;}
 .port th,.port td{text-align:left;padding:14px 0;border-bottom:1px solid var(--line);color:var(--cream-2);font-weight:400;}
 .port td:last-child,.port th:last-child{text-align:right;font-family:var(--serif);font-size:20px;color:var(--gold-2);}
+.port .forfait-table td{text-align:right;font-family:var(--serif);font-size:20px;color:var(--gold-2);white-space:nowrap;}
+.port .forfait-table th{font-weight:400;}
+.port .forfait-table tr:first-child th{font:500 10.5px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-align:left;}
+.port .forfait-table tr:first-child th+th{text-align:right;}
 .port .eyebrow{font:500 10.5px var(--sans);letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
 .port .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
 .port .blog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,32px);margin-top:30px;}
