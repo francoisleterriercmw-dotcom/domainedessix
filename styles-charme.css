@@ -169,7 +169,7 @@ html.shot .story blockquote .l span,html.shot .hero h1 .ln span{transform:none;}
 
 /* ---------- Célébrer : accordéon ---------- */
 .cele{padding:0 0 clamp(100px,16vh,180px);}
-.cele h2{font-size:clamp(40px,6.4vw,110px);margin:14px 0 44px;}
+.cele h2{font-size:clamp(32px,4.4vw,68px);margin:14px 0 40px;text-align:center;}
 .cele h2 em{font-family:var(--serif);font-style:italic;font-weight:300;text-transform:none;letter-spacing:0;font-size:.9em;color:var(--gold-2);}
 .acc{display:flex;gap:10px;height:clamp(420px,70vh,680px);}
 .acc a{position:relative;flex:1;overflow:hidden;border-radius:2px;transition:flex 1s var(--ease);min-width:0;}
@@ -294,17 +294,17 @@ footer b{font-family:var(--display);font-weight:400;letter-spacing:.3em;text-tra
 @media (max-width:900px){.mosaic{grid-template-columns:repeat(2,minmax(0,1fr));}.mosaic figure.g1 img{aspect-ratio:4/3;}.cgrid,.form{grid-template-columns:1fr;}}
 
 /* ---------- Célébrer : grille de photos encadrées ---------- */
-.cele-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(16px,2.2vw,32px);}
+.cele-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,1.8vw,24px);max-width:1000px;margin:0 auto;}
 .cg{display:flex;flex-direction:column;gap:10px;color:var(--cream);}
-.cg-ph{display:block;aspect-ratio:3/4;border:1px solid rgba(212,175,90,.4);padding:10px;overflow:hidden;}
+.cg-ph{display:block;aspect-ratio:1;border:1px solid rgba(212,175,90,.4);padding:7px;overflow:hidden;}
 .cg-ph img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.04);transition:transform 1.4s var(--ease);}
 .cg:hover .cg-ph img{transform:scale(1.04);}
-.cg .rn{font-family:var(--serif);font-size:16px;letter-spacing:.3em;color:var(--gold);margin-top:10px;}
-.cg b{font-size:clamp(22px,2.2vw,30px);font-weight:400;}
-.cg p{font-size:14.5px;color:var(--cream-2);margin:0;}
+.cg .rn{font-family:var(--serif);font-size:14px;letter-spacing:.3em;color:var(--gold);margin-top:6px;}
+.cg b{font-size:clamp(18px,1.5vw,22px);font-weight:400;}
+.cg p{font-size:13.5px;line-height:1.6;color:var(--cream-2);margin:0;}
 .cg .v2-link{align-self:flex-start;margin-top:4px;}
 @media (max-width:900px){.cele-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
-@media (max-width:520px){.cele-grid{grid-template-columns:1fr;max-width:420px;}}
+@media (max-width:520px){.cele-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.cg b{font-size:17px;}}
 
 
 /* ---------- Pages intérieures ---------- */
