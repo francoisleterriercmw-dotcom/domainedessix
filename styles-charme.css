@@ -173,7 +173,7 @@ html.shot .story blockquote .l span,html.shot .hero h1 .ln span{transform:none;}
 .cele h2 em{font-family:var(--serif);font-style:italic;font-weight:300;text-transform:none;letter-spacing:0;font-size:.9em;color:var(--gold-2);}
 .acc{display:flex;gap:10px;height:clamp(420px,70vh,680px);}
 .acc a{position:relative;flex:1;overflow:hidden;border-radius:2px;transition:flex 1s var(--ease);min-width:0;}
-.acc a img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.8) contrast(1.06) brightness(.75);transition:transform 1.4s var(--ease);}
+.acc a img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.04) brightness(.95);transition:transform 1.4s var(--ease);}
 .acc a:hover{flex:3.2;}
 .acc a:hover img{transform:scale(1.06);}
 .acc .lab{position:absolute;left:22px;bottom:22px;right:22px;z-index:2;}
@@ -181,7 +181,7 @@ html.shot .story blockquote .l span,html.shot .hero h1 .ln span{transform:none;}
 .acc .lab p{max-width:36ch;font-size:14px;color:var(--cream-2);margin-top:12px;opacity:0;transform:translateY(8px);transition:opacity .6s .2s,transform .6s .2s;}
 .acc a:hover .lab b{writing-mode:horizontal-tb;rotate:0deg;}
 .acc a:hover .lab p{opacity:1;transform:none;}
-.acc a::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,13,10,.85),rgba(10,13,10,0) 55%);}
+.acc a::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,13,10,.72),rgba(10,13,10,0) 38%);}
 .acc .lab{z-index:2;}
 html.shot .acc a:first-child{flex:3.2;}
 html.shot .acc a:first-child .lab b{writing-mode:horizontal-tb;rotate:0deg;}
@@ -236,7 +236,7 @@ footer b{font-family:var(--display);font-weight:400;letter-spacing:.3em;text-tra
   .stay .art::after{background:linear-gradient(0deg,var(--bg-2) 0%,rgba(17,22,17,0) 40%);}
   .stay .info{padding:22px var(--gut) 30px;gap:14px;justify-content:flex-start;}
   .acc{flex-direction:column;height:auto;}
-  .acc a{height:120px;transition:height 1s var(--ease);}
+  .acc a{height:200px;transition:height 1s var(--ease);}
   .acc a:hover{height:340px;}
   .acc .lab b{writing-mode:horizontal-tb;rotate:0deg;}
   .book .grid{grid-template-columns:1fr;}
