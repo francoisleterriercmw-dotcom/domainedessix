@@ -474,3 +474,10 @@ footer b{font-family:var(--display);font-weight:400;letter-spacing:.3em;text-tra
 .cond b{display:block;font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.1em;font-size:20px;margin-bottom:10px;}
 .cond p{color:var(--cream-2);font-size:14.5px;}
 @media (max-width:900px){.resa{grid-template-columns:1fr;}.resa-intro{position:static;}.form{grid-template-columns:1fr;}.grid-rates,.cond{grid-template-columns:1fr;}}
+
+/* Idées & guides (accueil) */
+.guides{padding:0 var(--gut-r) clamp(100px,16vh,180px) var(--gut);}
+.guides-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;}
+.guides-grid a{display:block;padding:18px 20px;border:1px solid rgba(212,175,90,.35);color:var(--cream);font:400 17px var(--serif);line-height:1.4;transition:border-color .4s,background .4s;}
+.guides-grid a small{display:block;font:500 10.5px var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.guides-grid a:hover{border-color:var(--gold);background:rgba(212,175,90,.08);}
